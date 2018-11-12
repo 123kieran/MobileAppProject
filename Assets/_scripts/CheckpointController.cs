@@ -11,12 +11,10 @@ public class CheckpointController : MonoBehaviour
 
    
     /// Start this instance.
-  
     void Start()
     {
         levelManager = FindObjectOfType<LevelManager>();
     }
-
 
     // Update is called once per frame
     void Update()
@@ -24,9 +22,7 @@ public class CheckpointController : MonoBehaviour
 
     }
 
-  
     /// Raises the trigger enter2 d event.
- 
     void OnTriggerEnter2D(Collider2D collide)
     {
         if (collide.name == "Player")

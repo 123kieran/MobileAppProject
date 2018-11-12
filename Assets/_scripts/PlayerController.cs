@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 	// grounded variables
 	public Transform groundCheck;
 	public float groundCheckRadius;
-	public LayerMask whatIsGround;
+	public LayerMask whereIsGround;
 	private bool grounded;
 
 	private bool doubleJumped;
@@ -30,16 +30,16 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, whatIsGround);
+		grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, whereIsGround);
 
 		Move (Input.GetAxis ("Horizontal"));
 		if (grounded)
 			doubleJumped = false;
 
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
-			Jump ();
-			
+			Jump ();	
 		}
+
 		if (Input.GetKeyDown (KeyCode.Space) && !grounded && !doubleJumped) {
 			doubleJumped = true;
 			Jump();
@@ -57,8 +57,5 @@ public class PlayerController : MonoBehaviour {
 	// Jump 
 	public void Jump () {
 		rigid2D.velocity = new Vector2 (moveSpeed, jumpHeight);
-		
-
 	}
-
 }

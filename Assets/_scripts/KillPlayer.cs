@@ -9,24 +9,18 @@ public class KillPlayer : MonoBehaviour
 
 
     /// Start this instance.
-   
     void Start()
     {
         levelManager = FindObjectOfType<LevelManager>();
     }
 
-
     /// Update this instance.
-  
     void Update()
     {
 
     }
 
-
-  
     /// Raises the trigger enterd event.
-
     void OnTriggerEnter2D(Collider2D collide)
     {
         if (collide.name == "Player")

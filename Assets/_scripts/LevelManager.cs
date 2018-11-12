@@ -7,20 +7,13 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
- 
     /// The current checkpoint.
-  
     public GameObject currentCheckpoint;
 
-    
     /// The player.
-  
     private PlayerController player;
 
-
     /// Start this instance.
-   
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -32,8 +25,6 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    /*
-	*/
     public void RespawnPlayer()
     {
         Debug.Log("DEBUG : Player Respawn");
