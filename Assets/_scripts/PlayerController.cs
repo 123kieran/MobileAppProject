@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-	
+	// 
 	Rigidbody2D rigid2D;
 
 	//player variables
-	public float moveSpeed = 6;
+	public float moveSpeed = 5;
 	public float maxSpeed = 2f;
-	public float jumpHeight = 15;
+	public float jumpHeight = 18;
 
 	// grounded variables
 	public Transform groundCheck;
 	public float groundCheckRadius;
-	public LayerMask whereIsGround;
+	public LayerMask whatIsGround;
 	private bool grounded;
 
 	private bool doubleJumped;
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, whereIsGround);
+		grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, whatIsGround);
 
 		Move (Input.GetAxis ("Horizontal"));
 		if (grounded)
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour {
 	// Jump 
 	public void Jump () {
 		rigid2D.velocity = new Vector2 (moveSpeed, jumpHeight);
-		
+		//
 
 	}
 
