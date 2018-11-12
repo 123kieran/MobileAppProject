@@ -38,12 +38,12 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 			Jump ();
-			//
+			
 		}
 		if (Input.GetKeyDown (KeyCode.Space) && !grounded && !doubleJumped) {
 			doubleJumped = true;
 			Jump();
-			//
+			
 		}
 	}
 
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour {
 	// Jump 
 	public void Jump () {
 		rigid2D.velocity = new Vector2 (moveSpeed, jumpHeight);
-		//
+		
 
 	}
 
