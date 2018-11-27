@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
-
+/// <summary>
+/// DestroyFinishedParticle destroys objects to conserve memory
+/// </summary>
 public class DestroyFinishedParticle : MonoBehaviour
 {
     private ParticleSystem thisParticleSystem;
-   
     // Use this for initialization
     void Start()
     {
