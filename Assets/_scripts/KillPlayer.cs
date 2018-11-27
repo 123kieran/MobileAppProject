@@ -2,30 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//kill player
-public class KillPlayer : MonoBehaviour
-{
-    public LevelManager levelManager;
+/// <summary>
+/// Kill player.
+/// </summary>
+public class KillPlayer : MonoBehaviour {
+	public LevelManager levelManager;
+
+	/// <summary>
+	/// Start this instance.
+	/// </summary>
+	void Start () {
+		levelManager = FindObjectOfType<LevelManager> ();
+	}
+	
+	/// <summary>
+	/// Update this instance.
+	/// </summary>
+	void Update () {
+		
+	}
 
 
-    /// Start this instance.
-    void Start()
-    {
-        levelManager = FindObjectOfType<LevelManager>();
-    }
-
-    /// Update this instance.
-    void Update()
-    {
-
-    }
-
-    /// Raises the trigger enterd event.
-    void OnTriggerEnter2D(Collider2D collide)
-    {
-        if (collide.name == "Player")
-        {
-            levelManager.RespawnPlayer();
-        }
-    }
+	/// <summary>
+	/// Raises the trigger enter2 d event.
+	/// </summary>
+	void OnTriggerEnter2D(Collider2D collide){
+		if (collide.name == "Player") {
+			levelManager.RespawnPlayer();
+		}
+	}
 }
