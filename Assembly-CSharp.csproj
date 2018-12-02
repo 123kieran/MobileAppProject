@@ -67,6 +67,7 @@
     <Compile Include="Assets\_scripts\Enemy.cs" />
     <Compile Include="Assets\_scripts\KillPlayer.cs" />
     <Compile Include="Assets\_scripts\LevelManager.cs" />
+    <Compile Include="Assets\_scripts\LevelMove.cs" />
     <Compile Include="Assets\_scripts\MainMenu.cs" />
     <Compile Include="Assets\_scripts\PlayerController.cs" />
     <Compile Include="Assets\_scripts\ScoreManager.cs" />
