@@ -22,7 +22,7 @@ public class CheckpointController : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Raises the trigger enter2 d event.
+	/// Raises the trigger entered event.
 	/// </summary>
 	void OnTriggerEnter2D(Collider2D collide){
 		if (collide.name == "Player") {
