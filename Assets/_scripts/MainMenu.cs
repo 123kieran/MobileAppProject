@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
 {
 
     public string beginLevel;
-    
+    public string scores;
 
     // New Game
     public void NewGame()
@@ -14,12 +14,18 @@ public class MainMenu : MonoBehaviour
         // Load first level
         SceneManager.LoadScene(beginLevel);
     }
- 
+
+    // Scores
+    public void Scores()
+    {
+        // Load scores
+        SceneManager.LoadScene(scores);
+    }
+
     // exit Game
     public void ExitGame()
     {
         // Quit Game
-        //SceneManager.LoadScene(beginLevel);
         Application.Quit();
         Debug.Log("User has exited game");
     }

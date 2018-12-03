@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scence/level2.unity
     guid: 77c773f07039db944b00502f3ec7749d
+  - enabled: 1
+    path: Assets/Scence/ScoreMenu.unity
+    guid: 99e1e7ff6660d3f409daef5c59fabe6f
   m_configObjects: {}

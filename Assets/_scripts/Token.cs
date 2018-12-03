@@ -8,7 +8,7 @@ public class Token : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // only allow player pickup coins
+        // only allow player pickup tokens
         if (other.GetComponent<PlayerController>() == null)
             return;
 
