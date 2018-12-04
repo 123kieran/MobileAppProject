@@ -2393,6 +2393,11 @@ Prefab:
       propertyPath: gameOverView
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114232749754828142, guid: 2bcb18ffab395d44cbf707ac99a25af6,
+        type: 2}
+      propertyPath: m_Text
+      value: 000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bcb18ffab395d44cbf707ac99a25af6, type: 2}
   m_IsPrefabAsset: 0

@@ -10,14 +10,17 @@ public class MainMenu : MonoBehaviour
 
     // New Game
     public void NewGame()
-    {
-        // Load first level
+    { // Load first level
         SceneManager.LoadScene(beginLevel);
+        PlayerPrefs.SetInt("CurrentPlayerScore", 0);
+        PlayerPrefs.SetInt("CurrentPlayerLives", 0);
+       
     }
 
     // Scores
     public void Scores()
     {
+
         // Load scores
         SceneManager.LoadScene(scores);
     }

@@ -6,12 +6,13 @@ public class ScoreManager : MonoBehaviour
 
 
     public static int score;
-    Text text;
+    Text scoretext;
+    public static int highscore;
 
     // Use this for initialization
     void Start()
     {
-        text = GetComponent<Text>();
+        scoretext = GetComponent<Text>();
         //score = 0;
         // Set score to current score
         score = PlayerPrefs.GetInt("CurrentPlayerScore");
@@ -25,7 +26,7 @@ public class ScoreManager : MonoBehaviour
             score = 0;
         }
 
-        text.text = "" + score;
+        scoretext.text = "" + score;
     }
 
     // static to only allow one instance of score
@@ -38,7 +39,7 @@ public class ScoreManager : MonoBehaviour
     public static void ResetPoints()
     {
         score = 0;
-        PlayerPrefs.SetInt("CurrentPlayerScore", score);
+      //  PlayerPrefs.SetInt("CurrentPlayerScore", score);
 
     }
 }
