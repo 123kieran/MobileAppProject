@@ -7,13 +7,15 @@ using UnityEngine;
 /// </summary>
 public class KillPlayer : MonoBehaviour {
 	public LevelManager levelManager;
+    private LifeController lifeController;
 
-	/// <summary>
-	/// Start this instance.
-	/// </summary>
-	void Start () {
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
+    void Start () {
 		levelManager = FindObjectOfType<LevelManager> ();
-	}
+        lifeController = FindObjectOfType<LifeController>();
+    }
 	
 	/// <summary>
 	/// Update this instance.
@@ -29,6 +31,9 @@ public class KillPlayer : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collide){
 		if (collide.name == "Player") {
 			levelManager.RespawnPlayer();
-		}
+            lifeController.LoseLife();
+        }
 	}
 }
+
+           
