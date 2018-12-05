@@ -5,6 +5,7 @@ using UnityEngine;
 public class Token : MonoBehaviour {
 
     public int pointsToAdd;
+    public AudioSource tokenSoundEffect;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,7 +14,7 @@ public class Token : MonoBehaviour {
             return;
 
         ScoreManager.AddPoints(pointsToAdd);
-
+        tokenSoundEffect.Play();
         // remove point object
         Destroy(gameObject);
     }

@@ -32,6 +32,7 @@ public class KillPlayer : MonoBehaviour {
 		if (collide.name == "Player") {
 			levelManager.RespawnPlayer();
             lifeController.LoseLife();
+            collide.GetComponent<AudioSource>().Play();
         }
 	}
 }
