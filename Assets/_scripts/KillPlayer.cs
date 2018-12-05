@@ -8,6 +8,7 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour {
 	public LevelManager levelManager;
     private LifeController lifeController;
+    public AudioSource deathSoundEffect;
 
     /// <summary>
     /// Start this instance.
@@ -32,7 +33,7 @@ public class KillPlayer : MonoBehaviour {
 		if (collide.name == "Player") {
 			levelManager.RespawnPlayer();
             lifeController.LoseLife();
-            collide.GetComponent<AudioSource>().Play();
+            deathSoundEffect.Play();
         }
 	}
 }
