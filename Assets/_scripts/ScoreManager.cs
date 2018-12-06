@@ -7,14 +7,13 @@ public class ScoreManager : MonoBehaviour
 
     public static int score;
     Text scoretext;
-    public static int highscore;
-    Text highscoretext;
+   
 
     // Use this for initialization
     void Start()
     {
         scoretext = GetComponent<Text>();
-        //score = 0;
+        
         // Set score to current score
         score = PlayerPrefs.GetInt("CurrentPlayerScore");
     }
